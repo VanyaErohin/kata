@@ -727,7 +727,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default {
       &-shape {
         &:before,
         &:after {
-          background: #7000FF;
+
         }
       }
     }
@@ -740,71 +740,87 @@ span.ui-slider-handle.ui-corner-all.ui-state-default {
     box-shadow: 0 0 0.222222222em #7000FF;
     margin-bottom: 1em;
   }
-  &__btn {
-    user-select: none;
-    cursor: pointer;
-    position: relative;
-    align-self: center;
-    margin-top: auto;
-    margin-bottom: 1em;
+
+}
+.btn {
+  display: inline-block;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: 1em;
+  color: #fff;
+  &:before {
+    //content: '';
+    //display: block;
+    //width: 2.666666667em;
+    //height: 2.666666667em;
+    //border-radius: 50%;
+    //position: absolute;
+    //top: 0;
+    //bottom: 0;
+    //margin: auto;
+  }
+  &__shape {
+    //width: 2.666666667em;
+    transition: width .3s;
+    width: 0;
+    height: 2.666666667em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    background: #7000ff;
     &:before {
-      //content: '';
-      //display: block;
-      //width: 2.666666667em;
-      //height: 2.666666667em;
-      //border-radius: 50%;
-      //position: absolute;
-      //top: 0;
-      //bottom: 0;
-      //margin: auto;
-    }
-    &-shape {
-      //width: 2.666666667em;
-      transition: width .3s;
-      width: 0;
+      content: '';
+      display: block;
       height: 2.666666667em;
+      width: 1.333333333em;
+      border-radius: 2.666666667em 0 0 2.666666667em;
       position: absolute;
+      left: -1.333333333em;
       top: 0;
-      left: 0;
       bottom: 0;
       margin: auto;
-      background: #7000ff;
-      &:before {
-        content: '';
-        display: block;
-        height: 2.666666667em;
-        width: 1.333333333em;
-        border-radius: 2.666666667em 0 0 2.666666667em;
-        position: absolute;
-        left: -1.333333333em;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-      }
+    }
+    &:after {
+      content: '';
+      display: block;
+      height: 2.666666667em;
+      width: 1.333333333em;
+      border-radius: 0 2.666666667em 2.666666667em 0;
+      position: absolute;
+      right: -1.333333333em;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    &:before,
+    &:after {
+      background: #7000FF;
+    }
+  }
+  &__label {
+    position: relative;
+  }
+  &-black {
+    color: #000;
+    .btn__shape {
+      background: #FF5C00;
+      &:before,
       &:after {
-        content: '';
-        display: block;
-        height: 2.666666667em;
-        width: 1.333333333em;
-        border-radius: 0 2.666666667em 2.666666667em 0;
-        position: absolute;
-        right: -1.333333333em;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-      }
-    }
-    &-label {
-      position: relative;
-    }
-    &:hover {
-      .modal__btn-shape {
-        width: 100%;
+        background: #FF5C00;
       }
     }
   }
+  &:hover {
+    .btn__shape {
+      width: 100%;
+    }
+  }
 }
-
 .page {
   max-width: 29.333333333rem;
   font-family: 'Museo Sans', sans-serif;
