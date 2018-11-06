@@ -45,6 +45,8 @@ function reload() {
 }
 
 function watch() {
+    
+    style();
     browserSync.init({
         server: {
             baseDir: "./dest"
