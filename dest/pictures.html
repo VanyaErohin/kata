@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Найдите картину вам по душе</title>
+
+
+    <!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+<script>
+    $(function () {
+        $("#slider__width").slider({
+            range: true,
+            min: 5,
+            max: 400,
+            values: [5, 360],
+
+            slider: function (event, ui) {
+                console.log(ui.handle.style.left);
+                $("#width").val(ui.values[0] + " - " + ui.values[1]);
+            }
+        });
+
+        $("#slider__height").slider({
+            range: true,
+            min: 5,
+            max: 400,
+            values: [5, 360],
+            slide: function (event, ui) {
+                $("#height").val(ui.values[0] + " - " + ui.values[1]);
+            }
+        });
+
+        $("#slider__price").slider({
+            range: true,
+            min: 5,
+            max: 400,
+            values: [5, 360],
+            slide: function (event, ui) {
+                $("#price").val(ui.values[0] + " - " + ui.values[1]);
+            }
+        });
+        // $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+        //     " - $" + $("#slider-range").slider("values", 1));
+    });
+</script>
+<div class="container">
+    <a href="/" class="logo"></a>
+    <div class="sidebar">
+        <!--<div class="sidebar__header"></div>-->
+        <div class="sidebar__menu menu">
+            <div class="menu__item">
+                <a href="artists.html" class="menu__link">Художники</a>
+            </div>
+            <div class="menu__item">
+                <a href="pictures.html" class="menu__link">Найдите картину вам по душе</a>
+            </div>
+            <div class="menu__item">
+                <a href="delivery.html" class="menu__link">Оформим и привезём</a>
+            </div>
+            <div class="menu__item">
+                <a href="about.html" class="menu__link">О нас</a>
+            </div>
+        </div>
+        <div class="language">RU</div>
+    </div>
+
+
+    <section class="section">
+        <div class="title">Найдите картину вам по душе</div>
+        <div class="filter">
+            <div class="filter__header">
+                <div class="filter__row tags">
+                    <div class="tags__colors">
+                        <input type="checkbox" id="colored" name="colored" class="tags__checkbox">
+                        <label for="colored" class="tags__label">Цветная</label>
+
+                        <input type="checkbox" id="black-and-white" name="black-and-white" class="tags__checkbox">
+                        <label for="black-and-white" class="tags__label">Черно-белая</label>
+                    </div>
+                    <div class="tags__types">
+                        <input type="checkbox" id="graphic" name="graphic" class="tags__checkbox">
+                        <label for="graphic" class="tags__label">Графика</label>
+
+                        <input type="checkbox" id="painting" name="painting" class="tags__checkbox">
+                        <label for="painting" class="tags__label">Живопись</label>
+                    </div>
+                    <div class="tags__material">
+                        <input type="checkbox" id="canvas" name="canvas" class="tags__checkbox">
+                        <label for="canvas" class="tags__label">Холст</label>
+
+                        <input type="checkbox" id="paper" name="paper" class="tags__checkbox">
+                        <label for="paper" class="tags__label">Бумага</label>
+
+                        <input type="checkbox" id="wood" name="wood" class="tags__checkbox">
+                        <label for="wood" class="tags__label">Дерево</label>
+                    </div>
+                    <div class="tags__category">
+                        <input type="checkbox" id="child" name="child" class="tags__checkbox">
+                        <label for="child" class="tags__label">В десткую</label>
+
+                        <input type="checkbox" id="studio" name="studio" class="tags__checkbox">
+                        <label for="studio" class="tags__label">В студию</label>
+
+                        <input type="checkbox" id="bathroom" name="bathroom" class="tags__checkbox">
+                        <label for="bathroom" class="tags__label">В ванную</label>
+                    </div>
+                </div>
+                <div class="filter__row">
+                    <div class="params">
+                        <div class="params__width">
+                            <div class="params__name">Ширина</div>
+                            <input type="hidden" id="width" name="width">
+
+                            <div id="slider__width" class="params__slider"></div>
+
+                            <div class="params__footer">
+                                <div class="params__from">5 cm</div>
+                                <div class="params__to">360 cm</div>
+                            </div>
+                        </div>
+
+
+                        <div class="params__height">
+                            <div class="params__name">Высота</div>
+                            <input type="hidden" id="height" name="height">
+
+                            <div id="slider__height" class="params__slider"></div>
+
+                            <div class="params__footer">
+                                <div class="params__from">5 cm</div>
+                                <div class="params__to">360 cm</div>
+                            </div>
+                        </div>
+
+                        <div class="params__height">
+                            <div class="params__header">
+                                <div class="params__name">Цена</div>
+                                <div class="params__chekbox">
+                                    <input type="checkbox" id="sale" name="sale">
+                                    <label for="sale">Распродажа</label>
+                                </div>
+                            </div>
+                            <input type="hidden" id="price" name="price">
+
+                            <div id="slider__price" class="params__slider"></div>
+
+                            <div class="params__footer">
+                                <div class="params__from">2 200</div>
+                                <div class="params__to">125 300</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filter__result result ">
+                <img src="./img/item.jpg" alt="" class="result__item">
+                <img src="./img/item2.jpg" alt="" class="result__item">
+                <img src="./img/item3.jpg" alt="" class="result__item">
+                <img src="./img/item4.jpg" alt="" class="result__item">
+
+                <img src="./img/item.jpg" alt="" class="result__item">
+                <img src="./img/item2.jpg" alt="" class="result__item">
+                <img src="./img/item3.jpg" alt="" class="result__item">
+                <img src="./img/item4.jpg" alt="" class="result__item">
+
+                <img src="./img/item.jpg" alt="" class="result__item">
+                <img src="./img/item2.jpg" alt="" class="result__item">
+                <img src="./img/item3.jpg" alt="" class="result__item">
+                <img src="./img/item4.jpg" alt="" class="result__item">
+
+                <img src="./img/item.jpg" alt="" class="result__item">
+                <img src="./img/item2.jpg" alt="" class="result__item">
+                <img src="./img/item3.jpg" alt="" class="result__item">
+                <img src="./img/item4.jpg" alt="" class="result__item">
+
+            </div>
+        </div>
+    </section>
+</div>
+</body>
+</html>
