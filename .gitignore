@@ -3,3 +3,5 @@
 node_modules/
 
 dest/css/style.css
+
+package-lock.json
