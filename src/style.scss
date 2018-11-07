@@ -86,6 +86,8 @@ body {
 
 .sidebar {
   //height: 100%;
+  position: relative;
+  z-index: 1;
   box-sizing: content-box;
   color: #000;
   display: flex;
