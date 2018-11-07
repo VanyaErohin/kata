@@ -11,21 +11,15 @@
 <body>
 <div class="container">
     <div class="header">
-        <a href="/" class="logo"></a>
+        <a href="/admin" class="logo"></a>
         <div class="sidebar">
             <!--<div class="sidebar__header"></div>-->
             <div class="sidebar__menu menu">
                 <div class="menu__item">
-                    <a href="artists.html"  class="menu__link">Художники</a>
+                    <a href="edit-artist.html" class="menu__link">Добавить художника</a>
                 </div>
                 <div class="menu__item">
-                    <a href="pictures.html" class="menu__link">Найдите картину вам по душе</a>
-                </div>
-                <div class="menu__item">
-                    <a href="delivery.html" class="menu__link">Оформим и привезём</a>
-                </div>
-                <div class="menu__item">
-                    <a href="about.html" class="menu__link">О нас</a>
+                    <a href="edit-picture.html" class="menu__link">Добавить картину</a>
                 </div>
             </div>
             <div class="language">RU</div>
@@ -35,16 +29,92 @@
 
     <section class="section">
         <div class="title">Добавить картину</div>
-        <div class="form">
-            <div class="form__picture"></div>
-            <div class="form__author"></div>
-            <div class="form__name"></div>
-            <div class="form__params"></div>
-            <div class="form__prices"></div>
-            <div class="form__tags"></div>
+        <div class="form form--booked">
+            <div class="form__picture">
+               <img class="form__img" src="../img/item2.jpg">
+                <div class="form__booked">
+
+                    <div class="form__booked-wrapper">
+                        <div class="form__booked-close">×</div>
+                        <div class="form__booked-span">забронирована</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form__author">
+                <div class="form__author-img"></div>
+                <div class="form__author-name">Имя Фамилия / First Name Last Name</div>
+            </div>
+            <div class="form__name form__group form__group-input">
+                <input type="text" value="Песня" class="form__input">
+                <input type="text" value="Song" class="form__input">
+            </div>
+            <div class="form__params">
+                <div class="form__label">Размеры, см:</div>
+                <div class="form__group">
+                    <input type="text" class="form__input" value="45">
+                    <div class="form__multiply">×</div>
+                    <input type="text" class="form__input" value="45">
+                </div>
+
+            </div>
+            <div class="form__price">
+                <div class="form__price-default">
+                    <div class="form__label">Цена:</div>
+                    <div class="form__group form__group-input">
+                        <input type="text" class="form__input" value="14 000 ₽">
+                        <input type="text" class="form__input" value="$ 210">
+                    </div>
+                </div>
+                <div class="form__price-sale">
+                    <div class="form__label">Цена при распродаже:</div>
+                    <div class="form__group form__group-input">
+                        <input type="text" class="form__input" value="10 000 ₽">
+                        <input type="text" class="form__input" value="$ 150">
+                    </div>
+                </div>
+            </div>
+            <div class="form__tags">
+                <div class="form__label">Теги:</div>
+                <div class="tags">
+                    <div class="tags__colors">
+                        <input type="checkbox" id="colored" name="colored" class="tags__checkbox">
+                        <label for="colored" class="tags__label">Цветная</label>
+
+                        <input type="checkbox" id="black-and-white" name="black-and-white" class="tags__checkbox">
+                        <label for="black-and-white" class="tags__label">Черно-белая</label>
+                    </div>
+                    <div class="tags__types">
+                        <input type="checkbox" id="graphic" name="graphic" class="tags__checkbox">
+                        <label for="graphic" class="tags__label">Графика</label>
+
+                        <input type="checkbox" id="painting" name="painting" class="tags__checkbox">
+                        <label for="painting" class="tags__label">Живопись</label>
+                    </div>
+                    <div class="tags__material">
+                        <input type="checkbox" id="canvas" name="canvas" class="tags__checkbox">
+                        <label for="canvas" class="tags__label">Холст</label>
+
+                        <input type="checkbox" id="paper" name="paper" class="tags__checkbox">
+                        <label for="paper" class="tags__label">Бумага</label>
+
+                        <input type="checkbox" id="wood" name="wood" class="tags__checkbox">
+                        <label for="wood" class="tags__label">Дерево</label>
+                    </div>
+                    <div class="tags__category">
+                        <input type="checkbox" id="child" name="child" class="tags__checkbox">
+                        <label for="child" class="tags__label">В десткую</label>
+
+                        <input type="checkbox" id="studio" name="studio" class="tags__checkbox">
+                        <label for="studio" class="tags__label">В студию</label>
+
+                        <input type="checkbox" id="bathroom" name="bathroom" class="tags__checkbox">
+                        <label for="bathroom" class="tags__label">В ванную</label>
+                    </div>
+                </div>
+            </div>
             <div class="form__btn btn btn-black">
                 <div class="btn__shape"></div>
-                <div class="btn__label">Войти</div>
+                <div class="btn__label">Сохранить</div>
             </div>
         </div>
     </section>
