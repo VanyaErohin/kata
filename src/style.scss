@@ -262,9 +262,9 @@ body {
     margin-right: 1em;
   }
   &__img {
-    display: block;
-    max-width: 100%;
-    max-height: 17.777777778em;
+    //display: block;
+    //max-width: 100%;
+    //max-height: 17.777777778em;
   }
   &__about {
     font-size: .7em;
@@ -370,6 +370,7 @@ body {
     margin-bottom: 0;
 
     .work__preview{
+      background-image: none !important;
       margin-right: 3.555555556em;
       background-position: bottom left;
       background-size: contain;
@@ -378,7 +379,16 @@ body {
       max-width: 100%;
     }
     .work__img {
-      display: none;
+      display: block;
+      /* max-width: 100%; */
+      /* max-height: 17.777777778em; */
+      width: 100%;
+      /* width: 100%; */
+      height: auto;
+      max-height: 100vh;
+      //object-fit: contain;
+      //object-position: bottom;
+      //display: none;
     }
     //.work__img {
     //  height: 100vh;
