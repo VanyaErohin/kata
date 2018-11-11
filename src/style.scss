@@ -193,6 +193,15 @@ body {
     padding: 5em 1em 1em 4em;
     width: 9em;
     left: -20em;
+    .language {
+      transition: color .3s, height .3s, margin .3s, padding .3s;
+      box-shadow: none;
+
+      &--opened {
+        background: #fff;
+        color: #000;
+      }
+    }
   }
   .header {
     width: 9em;
