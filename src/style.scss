@@ -188,7 +188,7 @@ body {
     color: #fff;
     position: fixed;
     top: 0;
-    background: rgba(0,0,0,.8);
+    background: rgba(0, 0, 0, .8);
     bottom: 0;
     padding: 5em 1em 1em 4em;
     width: 9em;
@@ -351,6 +351,7 @@ body {
   }
 
 }
+
 .works {
   grid-row: 2;
 }
@@ -934,11 +935,13 @@ span.ui-slider-handle.ui-corner-all.ui-state-default {
     height: 100%;
   }
 }
+
 @media (max-width: 800px) {
   .page {
     max-width: none;
   }
 }
+
 .form {
   max-width: 29.333333333rem;
   font-size: 0.777777778em;
@@ -1014,7 +1017,7 @@ span.ui-slider-handle.ui-corner-all.ui-state-default {
     .form__input {
       max-width: 5.055555556rem;
     }
-    }
+  }
   &__price {
     display: flex;
     flex-direction: row;
