@@ -122,13 +122,14 @@ body {
   padding: 1em 1em 0 3em;
   justify-content: space-between;
   .language {
+    border-radius: 0.444444444em;
+    margin-left: -1em;
+    padding: 1em 1em 0 1em;
     user-select: none;
-    transition: height .3s, padding .3s, margin-left .3s;
+    transition: color .3s, height .3s, margin .3s, padding .3s, background-color .3s;
     width: 3.777777778em;
     &--opened {
-      margin-left: -1em;
       padding: 1em;
-      border-radius: 0.444444444em;
       box-shadow: 0 0 8px 0 rgba(196, 196, 196, 0.5);
       .language__item {
         &:first-child {
@@ -194,9 +195,8 @@ body {
     width: 9em;
     left: -20em;
     .language {
-      transition: color .3s, height .3s, margin .3s, padding .3s;
       box-shadow: none;
-
+      background-color: transparent;
       &--opened {
         background: #fff;
         color: #000;
