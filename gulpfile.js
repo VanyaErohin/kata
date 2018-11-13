@@ -9,7 +9,7 @@ sass = require("gulp-sass"),
 
 var paths = {
     styles: {
-        src: "./src/*.scss",
+        src: "./src/**/*.scss",
         dest: "public_html/css"
     }
 };
