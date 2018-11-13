@@ -10,7 +10,7 @@ sass = require("gulp-sass"),
 var paths = {
     styles: {
         src: "./src/*.scss",
-        dest: "dest/css"
+        dest: "public_html/css"
     }
 };
 
@@ -49,12 +49,12 @@ function watch() {
     style();
     browserSync.init({
         server: {
-            baseDir: "./dest"
+            baseDir: "./public_html"
         }
     });
     gulp.watch(paths.styles.src, style);
 
-    gulp.watch("./dest/*.html", reload);
+    gulp.watch("./public_html/*.html", reload);
 }
 
 exports.watch = watch
